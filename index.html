@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Неоновая кнопка GO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        .neon-button {
+            background: transparent;
+            color: #00ffcc;
+            border: 3px solid #00ffcc;
+            padding: 25px 60px;
+            font-size: 48px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 8px #00ffcc;
+            box-shadow: 0 0 10px #00ffcc,
+                        0 0 20px #00ffcc,
+                        0 0 30px #00ffcc,
+                        inset 0 0 10px #00ffcc;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        .neon-button:hover {
+            transform: scale(1.1);
+            color: #fff;
+            border-color: #ff00ff;
+            box-shadow: 0 0 15px #ff00ff,
+                        0 0 30px #ff00ff,
+                        0 0 45px #ff00ff,
+                        inset 0 0 15px #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            animation: none;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #00ffcc,
+                            0 0 10px #00ffcc,
+                            0 0 15px #00ffcc,
+                            inset 0 0 5px #00ffcc;
+                text-shadow: 0 0 5px #00ffcc;
+            }
+            to {
+                box-shadow: 0 0 15px #00ffcc,
+                            0 0 30px #00ffcc,
+                            0 0 45px #00ffcc,
+                            inset 0 0 15px #00ffcc;
+                text-shadow: 0 0 12px #00ffcc;
+            }
+        }
+
+        .neon-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <button class="neon-button"><i>МНЕ НЕХУЙ ДЕЛАТЬ</i></button>
+</body>
+</html>
